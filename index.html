@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESSENZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let slideIndex = 0;
+        showSlide(slideIndex);
+
+        function changeSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function prevSlide() {
+
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("main-picture")[0].getElementsByTagName("img");
+            let bullets = document.getElementsByClassName("bullets")[0].getElementsByClassName("bullet");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                bullets[i].classList.remove("active");
+            }
+            slides[slideIndex].style.display = "block";
+            bullets[slideIndex].classList.add("active");
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="wrapper-wide">
+        <div class="payment">
+            <img src="images/icon-bag.svg" alt="Ratenzahlung mit Klarna & PayPal">
+            <p>Ratenzahlung mit Klarna & PayPal</p>
+        </div>
+    </div>
+    <div class="logo">
+        <div class="wrapper-wide">
+            <a href="https://essenzshop.at/">
+                <img src="images/logo.svg" alt="Logo">
+            </a>
+            <a href="https://essenzshop.at/cart"><img src="images/icon-shopping-cart.svg" alt="Shopping Cart"></a>
+        </div>
+    </div>
+</header>
+
+
+    <main>
+
+        <section class="wrapper-wide title">
+            <h1>Rotklee MenoFit Kapseln <span>für mehr Wohlbefinden in den Wechseljahren</span></h1>
+        </section>
+
+        <section class="wrapper-wide hero">
+            <div class="carousel">
+                <div class="thumbnails">
+                    <div class="thumbnail" onclick="changeSlide(0)"><img src="images/carousel-main0.jpeg" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(1)"><img src="images/carousel-thumbnail1.jpeg" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(2)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(3)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(4)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
+                </div>
+                <div class="main-picture">
+                    <img src="images/carousel-main0.jpeg" alt="Picture">
+                    <img src="https://placehold.co/505x505" alt="Picture">
+                    <img src="https://placehold.co/505x505" alt="Picture">
+                    <img src="https://placehold.co/505x505" alt="Picture">
+                    <img src="https://placehold.co/505x505" alt="Picture">
+
+                    <div class="bullets">
+                        <span class="bullet active" onclick="changeSlide(0)"></span>
+                        <span class="bullet" onclick="changeSlide(1)"></span>
+                        <span class="bullet" onclick="changeSlide(2)"></span>
+                        <span class="bullet" onclick="changeSlide(3)"></span>
+                        <span class="bullet" onclick="changeSlide(4)"></span>
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#8963;</button>
+                    <button class="next" onclick="nextSlide()">&#8963;</button>
+                </div>
+            </div>
+
+            <div class="products-general">
+                <h2>Rotklee MenoFit Kapseln</h2>
+                <div class="rating">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/half-star.svg" alt="Half Star">
+                    <p class="number-of-reviews">489 Bewertungen</p>
+                </div>
+
+                <div id="choose-product" class="products">
+                    <div class="product" data-variant="47403384537413">
+                        <p class="save">15% Rabatt</p>
+                        <img src="images/essenz-2.svg" alt="2er PREMIUM Kur">
+                        <p class="pack"><span>2er</span> PREMIUM Kur</p>
+                        <p class="only">Nur <span>€34,97</span>/Stück</p>
+                        <p class="total">GESAMT</p>
+                        <p class="price">€84,95&nbsp;&nbsp;<span>€99,98</span></p>
+                    </div>
+
+                    <div class="product product-border" data-variant="47403384570181">
+                        <p class="save">30% Rabatt</p>
+                        <img src="images/essenz-4.svg" alt="4er INTENSIV Kur">
+                        <p class="pack"><span>4er</span> INTENSIV Kur</p>
+                        <p class="only">Nur <span>€34,97</span>/Stück</p>
+                        <p class="total">GESAMT</p>
+                        <p class="price">€139,90&nbsp;&nbsp;<span>€199,96</span></p>
+                        <p class="popular">AM BELIEBTESTEN</p>
+                    </div>
+
+                    <div class="product" data-variant="47403384504645">
+                        <p class="save">0% Rabatt</p>
+                        <img src="images/essenz-1.svg" alt="PROBEPACKUNG">
+                        <p class="pack">PROBEPACKUNG</p>
+                        <p class="only">NUR</p>
+                        <p class="price">€49,99</p>
+                        <p class="shipping">+€4,50 versand</p>
+                    </div>
+                </div>
+                <div class="money-order">
+                    <div class="money-back-guarantee">
+                        <img src="images/money-back-guarantee.svg" alt="100 Tage Geld-Zurück-Garantie">
+                        <p><span class="bold">100 Tage</span> Geld-Zurück-Garantie</p>
+                    </div>
+                    <a id="order-link" class="order-now " href="https://www.essenzshop.at/products/rotklee-menofit-kapseln?variant=47403384570181">JETZT SICHER BESTELLEN</a>
+                </div>
+                <div class="product-benefits">
+                    <ul>
+                        <li><img src="images/check-mark.svg" alt="Check mark">Ideal für Frauen in den Wechseljahren</li>
+                        <li><img src="images/check-mark.svg" alt="Check mark">Lindernde Wirkung bei Symptomen wie Hitzewallungen, Schlafstörungen u.v.m.</li>
+                        <li><img src="images/check-mark.svg" alt="Check mark">Reguliert Schwankungen des Östrogenspiegels</li>
+                        <li><img src="images/check-mark.svg" alt="Check mark">Beugt Haarausfall vor und steigert das Wohlbefinden</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper padding-bottom-small">
+
+            <div class="menofit-with-bottle ">
+                <img src="images/menofit-with-1.svg" alt="Menofit">
+            </div>
+
+            <a class="order-now" href="#choose-product">JETZT SICHER BESTELLEN</a>
+
+            <div class="customer-testimonials">
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Anna-Maria</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Klasse!!</p>
+                    <p class="text">Ich wollte es erstmal probieren und habe mir deshalb nur die Einzelpackung bestellt. Allerdings war ich schon nach zwei Wochen so überrascht von der positiven Auswirkung der Kapseln auf meine Hitzewallungen, dass ich gleich noch die Vorratspackung bestellt habe. Bin gespannt, was sich noch verändert in der nächsten Zeit.
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Sonja</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Ich bin überzeugt</p>
+                    <p class="text">Ganz klare Weiterempfehlung! Ich hatte davor eine herkömmliche Hormontherapie probiert und musste abbrechen, weil die Nebenwirkungen zu stark waren. Mit den MenoFit Kapseln habe ich keine Nebenwirkungen und bin begeistert, dass sich mein Östrogenspiegel eingependelt hat.
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Elfie</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Ein voller Erfolg</p>
+                    <p class="text">Ich war sehr skeptisch, weil ich eigentlich nie was im Internet bestelle, aber andererseits war ich auch frustriert von den Symptomen der Wechseljahre, also dachte ich mir, versuchen schadet ja nichts. Und ich bin total begeistert: Mein Schlaf ist viel ruhiger und tiefer geworden, ich wälze mich nachts nicht mehr hin und her. Top <span class="smiley">👍</span>
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Soraya</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">WOW</p>
+                    <p class="text">Seit drei Wochen nehme ich jetzt diese Kapseln und obwohl ich erst nicht dran geglaubt habe, was meine ältere Schwester mir da berichtet hat, bin auch ich jetzt von der tollen Wirkung überzeugt. Ich hatte ganz schlimme Schweißausbrüche, das war wirklich schon peinlich manchmal. Ich liebe es <span class="smiley">🥰</span>
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Birgit</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Super Kapseln</p>
+                    <p class="text">Meine Hitzewallungen sind fast verschwunden und ich fühle mich endlich wieder wie ich selbst! Danke, ich bleibe dran <span class="smiley">😍</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper padding-bottom-large">
+            <img class="customers-image" src="images/customers.png" alt="Customers">
+        </section>
+
+        <section class="wrapper">
+            <h2 class="symptoms-title">Wechselbeschwerden lindern</h2>
+            <p class="symptoms-headline">
+                Deine besten Jahre liegen vor dir – nicht hinter dir!</p>
+            <p class="symptoms-headline last">
+                Auch wenn das Hormonchaos dich von deinem wahren Ich entfernt hat, und du schon seit Monaten oder sogar Jahren darunter leidest.
+            </p>
+
+            <div class="symptoms-info">
+                <p><span>MenoFit-Kapseln</span> enthalten verschiedene natürliche Wirkstoffe, die eine positive Auswirkung auf Beschwerden in den Wechseljahren und Hormonungleichgewicht haben.</p>
+                <p>Es handelt sich hierbei um Rotklee- und Macawurzel-Extrakt sowie Zink.</p>
+                <p>Die Wirkstoffe unterstützen deinen normalen Hormonhaushalt und wirken Hormonveränderungen entgegen.</p>
+                <p>Diese Wirkstoffe sind von Apothekern zusammengestellt worden, um dich in einen Wechseljahren zu unterstützen.</p>
+            </div>
+        </section>
+        <section class="wrapper">
+            <div class="social-media-posts">
+                <h2>Social Media Beiträge echter Kundinnen</h2>
+                <p>Diese Bewertungen haben wir nach Rücksprache aus Facebook-Gruppen gesammelt.</p>
+
+                <div class="customer-reviews">
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Simone</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-simone.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Habe schon die dritte Packung angefangen und wenn ich mich zurück erinnere, wie ich teilweise dreimal täglich mein Shirt wechseln musste, weil ich ständig Schweißausbrüche hatte, hat sich da richtig viel verändert! Ich schwitze wieder normal und komme mit einem Shirt gut durch den Tag, wenn ich nicht gerade Sport mache.
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Elsa</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-elsa.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ich liebe diese Kapseln <span class="smiley">🥰👍</span> … Hab die zweite Packung fast leer … bin innerlich viel gelassener und entspannter geworden! DANKE für dieses super Produkt!</p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Karen</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-karen.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Moin moin, ich hab jetzt die dritte Packung angefangen und bin sehr dankbar, dass ich schon jetzt deutlich eine Veränderung spüre.Ich hatte schlimme HItzewallungen, meine Freunde dachten schon ich bin verrückt, wenn ich im Winter draußen die Jacke ausgezogen hab <span class="smiley">😅</span><br>Hat sich alles weitgehend eingependelt… Und keine Nebenwirkungen!!! <span class="smiley">👍</span></p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Selma</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-selma.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ich bin super zufrieden mit den Kapseln! Mich hatten die Wechseljahre echt heftig erwischt, ich hatte das Gefühl, gar nicht mehr ich selbst zu sein.. Jetzt nach 4 Wochen mit den Kapseln fühle ich mich viel besser und irgendwie harmonischer… Meine Freundin nimmt die Kapseln jetzt auch schon <span class="smiley">😀</span></p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Tina</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-tina.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Super Kapseln! Nehme sie schon ein paar Wochen und merke, dass ich viel entspannter geworden bin und nicht mehr so große Schwankungen in der Stimmung habe. Mit Schwitzen hatte ich auch ein Problem, das ist auch schon besser geworden. Daumen hoch <span class="smiley">👍</span></p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Melanie</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-melanie.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Bin echt begeistert <span class="smiley">🥰</span> Diese Kapseln haben mir die Wechseljahre so erleichtert!! Nehme sie schon mehrere Monate und will sie aus meinem Alltag nicht mehr wegdenken!!</p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Anna-Maria</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-anna-maria.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Hallo ihr Lieben, bin jetzt fast durch mit der zweiten Packung und habe erst etwas auf eine Wirkung warten müssen, aber nach ca. 3 Wochen haben sich meine Probleme deutlich gebessert, vor allem die Hitzewallungen sind deutlich besser geworden und ich fühle mich viel ausgeglichener <span class="smiley">🧘</span></p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Christine</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-christine.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Hallo, ich wollte kurz meine Erfahrung mit MenoFit teilen, ich konnte ganz tolle Verbesserungen der Symptome feststellen, die ich in den Wechseljahren bekommen habe. Dafür habe ich die Kapseln nach Anleitung einmal täglich genommen und schon nach ein paar Wochen einen deutlichen Unterschied gespürt. Daumen hoch <span class="smiley">👍👍👍</span></p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Lisi</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-lisi.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ich habe mit den Kapseln angefangen weil ich etwas Natürliches haben wollte… das habe ich mit MenoFit bekommen und was soll ich sagen… echt klasse, was die bewirken! Ich kann endlich wieder ruhig schlafen und fühle mich viel ruhiger, das hat mir wirklich gefehlt! Ich fühl mich wieder mehr wie ich selbst.</p>
+                    </div>
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Barbara</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verifizierter Kauf">
+                                <p>Verifizierter Kauf</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-barbara.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Rotklee MenoFit Kapseln</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ein ganz tolles Produkt, das ich schon meinen engen Freundinnen weiterempfohlen habe! Eine ganz sanfte angenehme Wirkung im Vergleich zu der normalen Hormontherapie die ich davor abgebrochen hab weil sie zu starke Nebenwirkungen hatte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="ingredients">
+                <h2>Was steckt hinter den Wirkstoffen?</h2>
+                <div>
+                    <h3>Rotklee</h3>
+                    <p>Der Extrakt der Rotklee-Pflanze enthält die sogenannten Isoflavone, die auch Phytoöstrogene genannt werden. Diese pflanzlichen Hormone sind einigen der menschlichen Hormone so ähnlich, dass sie eine ähnliche Auswirkung im Körper zeigen können. Das trifft auch auf Östrogen zu, das in den Wechseljahren vom weiblichen Körper in deutlich geringerem Ausmaß produziert wird. Isoflavone können also die Funktion von Östrogen weitgehend einnehmen und so den Hormonhaushalt wieder ins Gleichgewicht bringen. Das kann eine lindernde Auswirkung auf die mit den Wechseljahren einhergehenden Symptomen wie Hitzewallungen, Schlafprobleme, Schweißausbrüche etc. haben.</p>
+                </div>
+                <div>
+                    <h3>Macawurzel</h3>
+                    <p>Die Macawurzel hat ihren Ursprung in Peru und wird in der Naturheilkunde traditionell bei Verlust der Libido und Stimmungsschwankungen eingesetzt. Insgesamt wird der Wurzel sogar eine anregende Wirkung auf die Östrogenproduktion zugeschrieben. Zudem kann Maca dabei helfen, die körperliche Aktivität und Leistungsfähigkeit zu steigern, was in den Wechseljahren besonders von Vorteil sein kann.</p>
+                </div>
+                <div>
+                    <h3>Zink</h3>
+                    <p>Zink ist ein Spurenelement und trägt zur Erhaltung des normalen Hormonspiegels bei. Es sorgt mit dafür, dass Haare, Haut, Nägel und Knochen dauerhaft in normaler Form erhalten bleiben. Weiterhin unterstützt es das Immunsystem und ist an einer guten Wundheilung beteiligt. Zink wird außerdem bei Müdigkeit und Erschöpfung eingesetzt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="menofit-with-bottle">
+                <img src="images/menofit-with-3.svg" alt="Menofit">
+            </div>
+            <a class="order-now" href="#choose-product">JETZT SICHER BESTELLEN</a>
+        </section>
+
+        <section class="wrapper">
+            <h2 class="testimonials-title">Testimonials</h2>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Helena</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half-Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Ich wollte es nicht glauben, aber…</p>
+                    <p class="testimonial-long">Meine Haare sind durch die Wechseljahre recht dünn geworden und haben ihren Glanz verloren. Mir wurden diese Kapseln empfohlen, aber ich habe ehrlich gesagt nicht daran geglaubt, dass sie etwas verändern könnten. Umso überraschter war ich, als meine Haare begannen, wieder dicker und gesünder zu werden. Ich nehme die Kapseln nun schon einige Monate und meine Haare sind strahlend schön, als ob nie etwas gewesen wäre!
+                    </p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Cynthia</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half-Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Ein echter Gamechanger!!</p>
+                    <p class="testimonial-long">Ich habe die Kapseln vor ein paar Monaten angefangen zu nehmen und dachte sie wirken nicht. Erst, als die Packung leer war und ich sie nicht mehr nahm, merkte ich, dass sie die ganze Zeit gewirkt hatten. Denn meine Hitzewallungen und die innere Unruhe, besonders nachts beim Schlafen, kamen plötzlich wieder zurück. Da habe ich mir natürlich direkt die nächste Packung geholt und nehme sie jetzt regelmäßig.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Isabelle</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half-Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Magisch</p>
+                    <p class="testimonial-long">Ich bin 63 Jahre alt und habe über die letzten 18 Jahre wirklich schon viel für meine Beschwerden ausprobiert. Im Internet bin ich auf die Anzeige gestoßen und wollte sie erst ignorieren, aber dann hat eine innere Stimme gesagt “Probiere es doch!” und das hab ich dann auch gemacht. Nach ein paar Wochen habe ich nach und nach wieder in mein inneres Gleichgewicht zurückgefunden, ich war plötzlich nicht mehr so launisch und habe mich viel entspannter gefühlt. Auch nachts schlafe ich viel besser. Ganz toll!</p>
+                </div>
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Ann-Christin</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half-Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Ich fühle mich super!</p>
+                    <p class="testimonial-long">Diese Kapseln haben mein Leben sehr verändert, ich war sehr frustriert von den Hitzewallungen und ständigen Schweißausbrüchen. Endlich fühle ich mich wieder wohl!</p>
+                </div>
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Olga</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half-Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Wirklich hilfreich</p>
+                    <p class="testimonial-long">Seit die Wechseljahre bei mir begonnen haben, habe ich viel Probleme mit dem Gewicht gehabt. Das hat gut funktioniert mit den Kapseln, ich bin wieder bei meinem normalen Gewicht. Außerdem habe ich nicht mehr so viele unruhige Nächte. Ich bin sehr dankbar.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <img src="images/customers2.jpeg" alt="Customers">
+            <p class="left-on-stock">Noch 7 auf Lager. Mehr unterwegs.</p>
+            <a class="order-now" href="#choose-product">JETZT SICHER BESTELLEN</a>
+        </section>
+
+        <section class="wrapper">
+            <h2 class="comparisons-title">MenoFit Kapseln vs. Andere</h2>
+            <div class="comparisons">
+                <div class="comparison">
+                    <img src="images/product-our.svg" alt="">
+                    <h3 class="name"><span>Rotklee MenoFit</span><br> Lindernde Wirkung für die Wechseljahre</h3>
+                    <div class="highlighted-feature">
+                        <div class="feature bg-lighter">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>40mg Isoflavone pro Kapsel</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>100% natürliche Zusammensetzung</p>
+                        </div>
+                        <div class="feature bg-lighter">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>Optimale Verträglichkeit</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>Mit Macawurzel und Zink für starke Abwehrkräfte</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison">
+                    <img src="images/product-others.svg" alt="">
+                    <h3 class="name"><span>ANDERE</span><br> Produkte für die Wechseljahre</h3>
+                    <div class="highlighted-feature">
+                        <div class="feature bg-lighter">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>> 40mg Isoflavone</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Künstliche Zusätze</p>
+                        </div>
+                        <div class="feature bg-lighter">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Nebenwirkungen</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Häufig nur Rotklee-Extrakt als Power-Stoff</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="thirty-days">
+                <img src="images/30-days.svg" alt="">
+                <h2>Geld-zurück-Garantie</h2>
+                <p>Jetzt risikofrei testen:<br>
+                    <span>100 TAGE GELD ZURÜCK GARANTIE</span><br><br>
+                </p>
+            </div>
+            <a class="order-now" href="#choose-product">JETZT SICHER BESTELLEN</a>
+        </section>
+
+
+        <section class="wrapper">
+            <h2 class="faq-title">Häufig gestellte Fragen</h2>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq1" class="accordion-checkbox">
+                <label for="faq1" class="accordion-label">Welche natürlichen Wirkstoffe sind enthalten und wie können sie in den Wechseljahren helfen?</label>
+                <div class="accordion-content">
+                    <p>Rotklee: Die im Rotklee enthaltenen Isoflavone, sogenannte Phytoöstrogene, zeigen im Körper hormonähnliche Wirkungen. Die Isoflavone Biochanin A, Formononetin, Genistein und Daidzein sind den körpereigenen Hormonen so ähnlich, dass sie ihre Aufgabe übernehmen können. Sie können Beschwerden in den Wechseljahren wie Hitzewallungen und Schweißausbrüche lindern, verbessern die Durchblutung und beugen dem Knochenschwund im Alter vor. Zudem wirkt Rotklee-Extrakt antioxidativ. Rotklee hat keine Nebenwirkungen und führt zu keiner Gewichtszunahme, was dagegen mit der üblichen Hormonersatztherapie oft der Fall ist. In Kombination mit Zink und Blütenpollen stellen unsere Essenz Rotklee Menofit Kapseln eine milde, pflanzliche Alternative für körperliche und seelische Harmonie in und nach den Wechseljahren dar.
+                        <br>Macawurzel und Zink: Macawurzel-Extrakt und Zink steigern die Leistungsfähigkeit und die Abwehrkräfte. Zink ist eines der wichtigsten Spurenelemente. Es steuert die Insulinproduktion und ist auch an der Insulinspeicherung beteiligt. Zink stabilisiert die Zellmembranen und beschleunigt die Wundheilung.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq2" class="accordion-checkbox">
+                <label for="faq2" class="accordion-label">Was sind pflanzliche Hormone?</label>
+                <div class="accordion-content">
+                    <p>Bei der natürlichen Behandlung der Wechselbeschwerden kommt den Phytoöstrogenen – Isoflavone, Cumestane und Lignane – eine immer größere Bedeutung zu. Diese Pflanzenhormone haben im Körper hormonähnliche Wirkungen und können daher teilweise die Aufgaben der körpereigenen Hormone übernehmen.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq3" class="accordion-checkbox">
+                <label for="faq3" class="accordion-label">Haben die Kapseln Nebenwirkungen?</label>
+                <div class="accordion-content">
+                    <p>Unsere MenoFit Kapseln bestehen zu 100% aus natürlichen Inhaltsstoffen für eine optimale Verträglichkeit. Es gibt keine bekannten Nebenwirkungen.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq4" class="accordion-checkbox">
+                <label for="faq4" class="accordion-label">Wann sollte ich die Kapseln nicht nehmen?</label>
+                <div class="accordion-content">
+                    <p>Bei allen hormonsensitiven Erkrankungen, wie Brust-, Uterus- und Eierstockkrebs, Endometriose oder bei Myomen, sowie in der Schwangerschaft und Stillzeit sollten Sie Rotklee nicht verwenden.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq5" class="accordion-checkbox">
+                <label for="faq5" class="accordion-label">Wann kann ich mit ersten Ergebnissen rechnen?</label>
+                <div class="accordion-content">
+                    <p>Genauso individuell wie jede Frau ist, ist auch die eintretende Wirkung. Viele unserer Kundinnen berichten allerdings von ersten spürbaren Resultaten nach 3 Wochen der Einnahme.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="sources">
+            <section class="wrapper">
+                <h2>Quellen:</h2>
+                <div class="sources-list">
+                    <p>[1]&nbsp;<a href="https://journals.lww.com/menopausejournal/Abstract/2008/15060/Beneficial_effects_of_Lepidium_meyenii__Maca__on.24.aspx">https://journals.lww.com/menopausejournal/Abstract/2008/15060/Beneficial_effects_of_Lepidium_meyenii__Maca__on.24.aspx</a></p>
+                    <p>[2]&nbsp;<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614644/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614644/</a></p>
+                    <p>[3]&nbsp;<a href="https://pubmed.ncbi.nlm.nih.gov/12161042/">https://pubmed.ncbi.nlm.nih.gov/12161042/</a></p>
+                    <p>[4]&nbsp;<a href="https://pubmed.ncbi.nlm.nih.gov/21870906/">https://pubmed.ncbi.nlm.nih.gov/21870906/</a></p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+
+<footer>
+    <div class="wrapper-wide">
+        <div class="footer-container">
+            <div class="logo">
+                <a href="https://essenzshop.at/">
+                    <img src="images/logo-white.svg" alt="Logo">
+                </a>
+                <img src="images/footer-image.svg" alt="Essenz">
+            </div>
+            <input type="checkbox" id="toggle-legal" class="footer-accordion-toggle">
+            <div class="footer-legal">
+                <label for="toggle-legal" class="footer-accordion-label">RECHTLICHES</label>
+                <ul>
+                    <li><a href="https://www.essenzshop.at/policies/privacy-policy">Datenschutz</a></li>
+                    <li><a href="https://www.essenzshop.at/policies/terms-of-service">AGBs</a></li>
+                    <li><a href="https://www.essenzshop.at/pages/b2b-agbs">B2B-AGBs</a></li>
+                    <li><a href="https://www.essenzshop.at/policies/refund-policy">Rückerstattungsrichtlinie</a></li>
+                    <li><a href="https://www.essenzshop.at/policies/legal-notice">Impressum</a></li>
+                </ul>
+            </div>
+            <input type="checkbox" id="toggle-info" class="footer-accordion-toggle">
+            <div class="footer-info">
+                <label for="toggle-info" class="footer-accordion-label">WICHTIGE INFORMATIONEN</label>
+                <ul>
+                    <li><a href="https://essenzapotheken.at/">Apotheken</a></li>
+                    <li><a href="https://essenzapotheken.at/unsere-werte/">Über Uns</a></li>
+                    <li><a href="https://www.essenzshop.at/blogs/essenz-blog">Blog</a></li>
+                    <li><a href="https://essenzapotheken.at/kontakt/">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/magjobsessenzapotheken/"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/magjobsessenzapotheken/"><img src="images/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024, <a href="https://www.essenzshop.at/?_gl=1*1tffnea*_up*MQ..*_ga*Njk5OTk1ODcxLjE3MDM1ODc3MTE.*_ga_8TR98ZNFRH*MTcwMzU4NzcxMC4xLjAuMTcwMzU4NzcxMC4wLjAuMA..*_ga_S5PSPP6KFJ*MTcwMzU4NzcxMS4xLjAuMTcwMzU4NzcxMS4wLjAuMA..">Essenzshop</a></p>
+            <div>
+                <img src="images/icon-gpay.svg" alt="Google Pay">
+                <img src="images/icon-apple-pay.svg" alt="Apple Pay">
+                <img src="images/icon-paypal.svg" alt="PayPal">
+                <img src="images/icon-visa.svg" alt="Visa Card">
+                <img src="images/icon-amex.svg" alt="Amex">
+                <img src="images/icon-master-card.svg" alt="Master Card">
+                <img src="images/icon-maestro.svg" alt="Maestro Card">
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    const products = document.querySelectorAll('.product');
+    const orderLink = document.getElementById('order-link');
+
+    products.forEach(product => {
+        product.addEventListener('click', () => {
+            const variant = product.dataset.variant;
+            orderLink.href = `https://www.essenzshop.at/products/rotklee-menofit-kapseln?variant=${variant}`;
+            updateBorders(product);
+        });
+    });
+
+    function updateBorders(clickedProduct) {
+        products.forEach(product => {
+            if (product === clickedProduct) {
+                product.classList.add('product-border');
+            } else {
+                product.classList.remove('product-border');
+            }
+        });
+    }
+</script>
+</body>
+</html>
