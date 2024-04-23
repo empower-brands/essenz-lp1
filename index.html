@@ -7,37 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
-    <script>
-        let slideIndex = 0;
-        showSlide(slideIndex);
-
-        function changeSlide(n) {
-            showSlide(slideIndex = n);
-        }
-
-        function prevSlide() {
-
-            showSlide(slideIndex -= 1);
-        }
-
-        function nextSlide() {
-            showSlide(slideIndex += 1);
-        }
-
-        function showSlide(n) {
-            let slides = document.getElementsByClassName("main-picture")[0].getElementsByTagName("img");
-            let bullets = document.getElementsByClassName("bullets")[0].getElementsByClassName("bullet");
-            if (n >= slides.length) { slideIndex = 0; }
-            if (n < 0) { slideIndex = slides.length - 1; }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                bullets[i].classList.remove("active");
-            }
-            slides[slideIndex].style.display = "block";
-            bullets[slideIndex].classList.add("active");
-        }
-    </script>
 </head>
 <body>
 <header>
@@ -66,30 +37,96 @@
 
         <section class="wrapper-wide hero">
             <div class="carousel">
-                <div class="thumbnails">
-                    <div class="thumbnail" onclick="changeSlide(0)"><img src="images/carousel-main0.jpeg" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(1)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(2)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(3)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(4)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
-                </div>
-                <div class="main-picture">
-                    <img src="images/carousel-main0.jpeg" alt="Picture">
-                    <img src="https://placehold.co/505x505" alt="Picture">
-                    <img src="https://placehold.co/505x505" alt="Picture">
-                    <img src="https://placehold.co/505x505" alt="Picture">
-                    <img src="https://placehold.co/505x505" alt="Picture">
-
-                    <div class="bullets">
-                        <span class="bullet active" onclick="changeSlide(0)"></span>
-                        <span class="bullet" onclick="changeSlide(1)"></span>
-                        <span class="bullet" onclick="changeSlide(2)"></span>
-                        <span class="bullet" onclick="changeSlide(3)"></span>
-                        <span class="bullet" onclick="changeSlide(4)"></span>
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiperImages2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main0.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main1.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main2.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main3.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main4.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main5.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main6.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main7.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main8.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main9.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main10.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main11.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main12.jpeg" />
+                        </div>
                     </div>
-                    <button class="prev" onclick="prevSlide()">&#8963;</button>
-                    <button class="next" onclick="nextSlide()">&#8963;</button>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
+                <div thumbsSlider="" class="swiper mySwiperImages">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main0.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main1.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main2.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main3.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main4.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main5.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main6.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main7.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main8.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main9.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main10.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main11.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main12.jpeg" />
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="products-general">
@@ -833,6 +870,7 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     const products = document.querySelectorAll('.product');
     const orderLink = document.getElementById('order-link');
@@ -854,6 +892,29 @@
             }
         });
     }
+
+    var swiper = new Swiper(".mySwiperImages", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiperImages2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
 </script>
 </body>
 </html>
